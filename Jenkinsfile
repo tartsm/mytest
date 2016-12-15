@@ -1,4 +1,4 @@
-stage "first step on first node" {
+stage('first step on first node') {
 // Mark the code checkout 'stage'....
     node {
         // Checkout code from repository
