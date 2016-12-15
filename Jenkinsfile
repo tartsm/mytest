@@ -1,6 +1,6 @@
 stage('first step on first node') {
 // Mark the code checkout 'stage'....
-    node {
+    node ('master') {
         ws('/ds1/jenkins/workspace/myWorkflowTest') {
             // Checkout code from repository
             checkout scm
