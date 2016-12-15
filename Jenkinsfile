@@ -1,6 +1,6 @@
 node {
    // Mark the code checkout 'stage'....
-   stage 'Checkout' {
+    job('Multibranch_Workflow_Test_checkout') {
 
       // Checkout code from repository
       checkout scm
@@ -12,7 +12,7 @@ node {
    // def mvnHome = tool 'M3'
 
    // Mark the code build 'stage'....
-   stage 'Build' {
+    job('Multibranch_Workflow_Test_Build') {
        // Run the maven build
        maven {
            mavenInstallation('Maven 3')
