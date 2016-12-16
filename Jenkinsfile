@@ -28,4 +28,4 @@ stage('first step on first node') {
             }
         }
     }
-}
+
