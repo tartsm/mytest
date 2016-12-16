@@ -1,7 +1,7 @@
 stage('first step on first node') {
 // Mark the code checkout 'stage'....
     node ('master') {
-        ws('/ds1/jenkins/workspace/myWorkflowTest') {
+        ws('/ds1/jenkins/workspace/myWorkflowTestGit') {
             // Checkout code from repository
             checkout scm
             // Run the maven build
