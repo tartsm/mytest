@@ -1,8 +1,10 @@
 
-stage('first step on first node') {
-// Mark the code checkout 'stage'....
+stage('all steps once') {
     node ('master') {
-	    //build('mytest_2_roadlog_dsl_clean_install','Halooo!')
-	    build job: 'mytest_2_roadlog_dsl_clean_install', parameters: [string(name: 'MESSAGE', value: 'jeeee')]
+	     ws('/ds1/jenkins/workspace/myWorkflowTest') {
+		     checkout scm
+	    	     build('multi_branch_roadlog_dsl')
+	    //build job: 'mytest_2_roadlog_dsl_clean_install', parameters: [string(name: 'MESSAGE', value: 'jeeee')]
+	     }
     }
 }
